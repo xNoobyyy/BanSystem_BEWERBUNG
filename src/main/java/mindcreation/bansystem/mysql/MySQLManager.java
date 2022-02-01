@@ -1,8 +1,8 @@
-package net.mindcreation.bansystem.mysql;
+package mindcreation.bansystem.mysql;
 
 import lombok.SneakyThrows;
-import net.mindcreation.bansystem.Main;
-import net.mindcreation.bansystem.ban.BanReason;
+import mindcreation.bansystem.Main;
+import mindcreation.bansystem.ban.BanReason;
 
 import java.sql.*;
 

@@ -1,4 +1,4 @@
-package net.mindcreation.bansystem.utils;
+package mindcreation.bansystem.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
@@ -66,10 +66,6 @@ public final class UUIDUtils {
 
         UUID UUIDOld = getUUIDTime(name, (Time - (60 * 60 * 24 * 30)));
         return getName(UUIDOld);
-    }
-
-    public static UUID getCrackedUUID(String name) throws UnsupportedEncodingException {
-        return UUID.nameUUIDFromBytes(("OfflinePlayer:" + name).getBytes("UTF_8"));
     }
 
     public static UUID getUUID(String name) throws Exception {

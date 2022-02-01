@@ -1,16 +1,16 @@
-package net.mindcreation.bansystem;
+package mindcreation.bansystem;
 
 import lombok.SneakyThrows;
+import mindcreation.bansystem.commands.BanCommand;
+import mindcreation.bansystem.commands.KickCommand;
+import mindcreation.bansystem.commands.UnbanCommand;
+import mindcreation.bansystem.listener.LoginListener;
+import mindcreation.bansystem.mysql.MySQLManager;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
-import net.mindcreation.bansystem.commands.BanCommand;
-import net.mindcreation.bansystem.commands.KickCommand;
-import net.mindcreation.bansystem.commands.UnbanCommand;
-import net.mindcreation.bansystem.listener.LoginListener;
-import net.mindcreation.bansystem.mysql.MySQLManager;
 
 import java.io.File;
 

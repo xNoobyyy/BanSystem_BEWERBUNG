@@ -1,4 +1,4 @@
-package net.mindcreation.bansystem.ban;
+package mindcreation.bansystem.ban;
 
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 

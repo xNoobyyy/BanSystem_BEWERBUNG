@@ -1,21 +1,21 @@
-package net.mindcreation.bansystem.commands;
+package mindcreation.bansystem.commands;
 
+import lombok.SneakyThrows;
+import mindcreation.bansystem.utils.UUIDUtils;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
-import net.mindcreation.bansystem.Main;
+import mindcreation.bansystem.Main;
 
-import java.util.Arrays;
-import java.util.List;
+public class UnbanCommand extends Command {
 
-public class KickCommand extends Command {
-
-    public KickCommand() {
-        super("kick", "bansystem.kick");
+    public UnbanCommand() {
+        super("unban", "bansystem.unban");
     }
 
+    @SneakyThrows
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (!(sender instanceof ProxiedPlayer)) {
@@ -25,16 +25,13 @@ public class KickCommand extends Command {
 
         ProxiedPlayer player = (ProxiedPlayer) sender;
 
-        if (args.length >= 1) {
-            if (Main.getInstance().getProxy().getPlayer(args[0]) != null) {
-                ProxiedPlayer target = Main.getInstance().getProxy().getPlayer(args[0]);
-                String reason = "Kicked";
-                if (args.length >= 2) {
-                    List<String> reasonArgs = Arrays.asList(args);
-                    reasonArgs.remove(0);
-                    reason = String.join(" ", reasonArgs);
+        if (args.length == 1) {
+            if (UUIDUtils.getUUID(args[0]) != null) {
+                if (Main.getMySQLManager().isBanned(UUIDUtils.getUUID(args[0]).toString())) {
+                    Main.getMySQLManager().removeBan(UUIDUtils.getUUID(args[0]).toString());
+                } else {
+                    player.sendMessage(new TextComponent(ChatColor.RED + "This player is not banned: " + args[0]));
                 }
-                target.disconnect(new TextComponent(ChatColor.RED + "You have been kicked!\n" + ChatColor.RED + "Reason:" + reason));
             } else {
                 player.sendMessage(new TextComponent(ChatColor.RED + "Player not found: " + args[0]));
             }

@@ -1,14 +1,14 @@
-package net.mindcreation.bansystem.commands;
+package mindcreation.bansystem.commands;
 
 import lombok.SneakyThrows;
+import mindcreation.bansystem.utils.UUIDUtils;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
-import net.mindcreation.bansystem.utils.UUIDUtils;
-import net.mindcreation.bansystem.Main;
-import net.mindcreation.bansystem.ban.BanReason;
+import mindcreation.bansystem.Main;
+import mindcreation.bansystem.ban.BanReason;
 
 public class BanCommand extends Command {
 
