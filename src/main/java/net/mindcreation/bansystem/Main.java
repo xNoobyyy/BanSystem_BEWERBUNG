@@ -1,4 +1,4 @@
-package net.minecreation.bansystem;
+package net.mindcreation.bansystem;
 
 import lombok.SneakyThrows;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -6,14 +6,13 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
-import net.minecreation.bansystem.commands.BanCommand;
-import net.minecreation.bansystem.commands.KickCommand;
-import net.minecreation.bansystem.commands.UnbanCommand;
-import net.minecreation.bansystem.listener.LoginListener;
-import net.minecreation.bansystem.mysql.MySQLManager;
+import net.mindcreation.bansystem.commands.BanCommand;
+import net.mindcreation.bansystem.commands.KickCommand;
+import net.mindcreation.bansystem.commands.UnbanCommand;
+import net.mindcreation.bansystem.listener.LoginListener;
+import net.mindcreation.bansystem.mysql.MySQLManager;
 
 import java.io.File;
-import java.sql.SQLException;
 
 public final class Main extends Plugin {
 

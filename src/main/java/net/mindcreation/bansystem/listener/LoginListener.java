@@ -1,4 +1,4 @@
-package net.minecreation.bansystem.listener;
+package net.mindcreation.bansystem.listener;
 
 import lombok.SneakyThrows;
 import net.md_5.bungee.api.ChatColor;
@@ -7,12 +7,11 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
-import net.minecreation.bansystem.Main;
-import net.minecreation.bansystem.ban.BanReason;
+import net.mindcreation.bansystem.Main;
+import net.mindcreation.bansystem.ban.BanReason;
 
 import java.sql.Date;
 import java.sql.ResultSet;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 

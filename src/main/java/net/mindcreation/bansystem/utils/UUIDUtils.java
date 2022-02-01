@@ -1,4 +1,4 @@
-package net.minecreation.bansystem.utils;
+package net.mindcreation.bansystem.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
