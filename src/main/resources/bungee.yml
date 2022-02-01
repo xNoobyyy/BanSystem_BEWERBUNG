@@ -1,0 +1,4 @@
+name: BanSystem
+version: '1.0'
+main: net.minecreation.bansystem.Main
+description: BanSystem for Minecreation
