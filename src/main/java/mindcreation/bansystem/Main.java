@@ -51,6 +51,8 @@ public final class Main extends Plugin {
             configureDatabase = true;
         }
 
+        ConfigurationProvider.getProvider(YamlConfiguration.class).save(configuration, new File(getDataFolder(), "config.yml"));
+
         if (configureDatabase) {
             this.getProxy().getConsole().sendMessage(new TextComponent("[BanSystem] Please configure the MySQL Database in the config.yml"));
         }
